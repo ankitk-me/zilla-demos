@@ -123,7 +123,7 @@ services:
         condition: service_completed_successfully
 
   kafka-init:
-    image: bitnami/kafka:3.2
+    image: bitnamilegacy/kafka:3.2
     container_name: kafka-init
     networks:
       - kafka-net
@@ -152,7 +152,7 @@ services:
         condition: service_healthy
 
   kafka:
-    image: bitnami/kafka:3.2
+    image: bitnamilegacy/kafka:3.2
     container_name: kafka
     restart: unless-stopped
     ports:
